@@ -1,38 +1,22 @@
-import Link from "next/link";
+import { HeroSection } from "@/components/component/hero-section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-white">
-      <h1 className="text-4xl font-bold mb-6 text-primary-800">
-        Welcome to MYHackathon
-      </h1>
-      <p className="text-xl mb-8 text-primary-600">Innovate, Create, Elevate</p>
-      <div className="flex flex-col space-y-4">
-        <Link
-          href="/events"
-          className="bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded text-center"
-        >
-          View Events
-        </Link>
-        <Link
-          href="/mentors"
-          className="bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-2 px-4 rounded text-center"
-        >
-          Meet Our Mentors
-        </Link>
-        <Link
-          href="/faq"
-          className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-2 px-4 rounded text-center"
-        >
-          FAQ
-        </Link>
-        <Link
-          href="/portal"
-          className="bg-primary-700 hover:bg-primary-800 text-white font-bold py-2 px-4 rounded text-center"
-        >
-          Enter Portal
-        </Link>
-      </div>
-    </main>
+    <>
+      <HeroSection />
+      <section className="py-12 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">About MYHackathon</h2>
+          {/* Add content about the hackathon */}
+        </div>
+      </section>
+      <section className="py-12 md:py-24 lg:py-32 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">Event Timeline</h2>
+          {/* Add timeline or other information */}
+        </div>
+      </section>
+      {/* Add more sections as needed */}
+    </>
   );
 }
